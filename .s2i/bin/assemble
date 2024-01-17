@@ -65,6 +65,10 @@ fi
 
 echo "---> Installing all dependencies pnpm"
 pnpm i -g @botpress/cli
+bp init --name botocp --type integration
+cd botocp
+pnpm install
+bp build
 
 # Fix source directory permissions
 fix-permissions ./
